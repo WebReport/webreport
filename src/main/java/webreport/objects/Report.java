@@ -18,5 +18,42 @@ package webreport.objects;
         along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+import org.bukkit.entity.Player;
+
 public class Report {
+
+    private Player snitch;
+    private Player reported;
+    private String reason;
+    private String reportID;
+    private boolean resolved;
+
+    public Report(Player snitch, Player reported, String reason, String reportID, boolean resolved) {
+        this.snitch = snitch;
+        this.reported = reported;
+        this.reason = reason;
+        this.reportID = reportID;
+        this.resolved = resolved;
+    }
+
+    public Player getSnitch() {
+        return snitch;
+    }
+
+    public Player getReported() {
+        return reported;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public String getReportID() {
+        return reportID;
+    }
+
+    public void resolve() {
+        this.resolved = true;
+    }
+
 }

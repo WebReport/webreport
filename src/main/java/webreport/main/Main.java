@@ -18,6 +18,13 @@ package webreport.main;
         along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class Main {
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+
+    public void onEnable() {
+        getLogger().info("WebReport is running.");
+
+    }
 
 }
