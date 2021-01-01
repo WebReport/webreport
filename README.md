@@ -1,0 +1,2 @@
+# WebReport
+WebReport is a Minecraft Bukkit plugin that aims to provide a website interface that allows moderators to manage player reports from the web. This is very much a work in progress and still needs a lot of work done to it.
