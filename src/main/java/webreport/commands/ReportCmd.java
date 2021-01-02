@@ -18,5 +18,22 @@ package webreport.commands;
         along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class ReportCmd {
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import webreport.objects.User;
+import webreport.objects.managers.UserManager;
+
+public class ReportCmd implements CommandExecutor {
+
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if(sender instanceof Player) {
+            UserManager.addUser((Player) sender);
+            User user = UserManager.getUser((Player) sender);
+            return true;
+        }
+        return false;
+    }
+
 }
